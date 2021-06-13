@@ -5,7 +5,7 @@ from ...abstract import Sample
 
 
 class CollectionUnknown(Sample):
-    file_path = SAMPLE / "item/collections/unknown.xml"
+    file_path = SAMPLE / "item/collection/unknown.xml"
     type = Collection
     object = Collection(
         english_name="UNKNOWN",

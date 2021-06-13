@@ -5,7 +5,7 @@ from ...abstract import Sample
 
 
 class ContentUnknown(Sample):
-    file_path = SAMPLE / "item/contents/unknown.xml"
+    file_path = SAMPLE / "item/content/unknown.xml"
     type = Content
     object = Content(
         english_name="Unknown",
