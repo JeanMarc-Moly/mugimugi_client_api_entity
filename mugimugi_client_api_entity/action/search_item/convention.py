@@ -10,7 +10,5 @@ from ...root import ValidRoot
 class SearchConvention(ValidRoot[Convention]):
     elements: list[Convention] = field(
         default_factory=list,
-        metadata=dict(
-            name=Convention.Meta.name, type=XmlType.ELEMENT, min_occurs=0
-        ),
+        metadata=dict(name=Convention.Meta.name, type=XmlType.ELEMENT, min_occurs=0),
     )

@@ -1,5 +1,5 @@
-from mugimugi_client_api_entity.main.book import Circle
 from mugimugi_client_api_entity.enum.position import Position
+from mugimugi_client_api_entity.main.book import Circle
 
 from .......configuration import SAMPLE
 from ....abstract import Sample

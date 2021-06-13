@@ -1,6 +1,6 @@
-from mugimugi_client_api_entity.main.book import Character
 from mugimugi_client_api_entity.enum import Ratio
 from mugimugi_client_api_entity.enum.gender import Sex
+from mugimugi_client_api_entity.main.book import Character
 
 from ......configuration import SAMPLE
 from ...abstract import Sample

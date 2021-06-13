@@ -5,6 +5,7 @@ from xsdata.formats.dataclass.models.elements import XmlType
 from ...main import Parody
 from ...root import ValidRoot
 
+
 @dataclass
 class SearchParody(ValidRoot[Parody]):
     elements: list[Parody] = field(

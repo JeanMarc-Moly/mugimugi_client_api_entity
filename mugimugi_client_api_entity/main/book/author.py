@@ -2,9 +2,8 @@ from dataclasses import dataclass, field
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...enum import Position
-
 from ...common import AuthorCommon
+from ...enum import Position
 from .abstract import LinkedPartialItem
 
 

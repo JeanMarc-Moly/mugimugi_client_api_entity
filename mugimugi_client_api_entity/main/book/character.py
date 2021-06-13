@@ -2,9 +2,8 @@ from dataclasses import dataclass, field
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...enum import Ratio
-
 from ...common import CharacterCommon
+from ...enum import Ratio
 from .abstract import LinkedPartialItem
 
 

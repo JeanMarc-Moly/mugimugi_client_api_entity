@@ -1,7 +1,7 @@
 from datetime import date
 
-from mugimugi_client_api_entity.main.book import *
 from mugimugi_client_api_entity.enum import Language
+from mugimugi_client_api_entity.main.book import *
 
 from .....configuration import SAMPLE
 from ..abstract import Sample

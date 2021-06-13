@@ -1,5 +1,5 @@
-from mugimugi_client_api_entity.main.book import Parody
 from mugimugi_client_api_entity.enum import Ratio
+from mugimugi_client_api_entity.main.book import Parody
 
 from ......configuration import SAMPLE
 from ...abstract import Sample

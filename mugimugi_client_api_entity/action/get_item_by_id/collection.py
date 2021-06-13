@@ -10,7 +10,5 @@ from ...root import ValidRoot
 class GetCollectionById(ValidRoot[Collection]):
     elements: list[Collection] = field(
         default_factory=list,
-        metadata=dict(
-            name=Collection.Meta.name, type=XmlType.ELEMENT, min_occurs=0
-        ),
+        metadata=dict(name=Collection.Meta.name, type=XmlType.ELEMENT, min_occurs=0),
     )
