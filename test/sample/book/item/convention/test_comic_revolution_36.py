@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.convention.comic_revolution_36 import (
+from test.resource.xml.sample.book.item.convention.comic_revolution_36 import (
     BookConventionComicRevolution36,
 )
 from unittest.case import TestCase

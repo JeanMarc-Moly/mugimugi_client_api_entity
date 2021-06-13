@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.imprint.no import BookImprintNo
+from test.resource.xml.sample.book.item.imprint.no import BookImprintNo
 from unittest.case import TestCase
 
 from ....abstract import Sample

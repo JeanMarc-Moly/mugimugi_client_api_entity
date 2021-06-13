@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.author.nakajima_yuka import (
+from test.resource.xml.sample.book.item.author.nakajima_yuka import (
     BookAuthorNakajimaYuka,
 )
 from unittest.case import TestCase

@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.publisher.no import BookPublisherNo
+from test.resource.xml.sample.book.item.publisher.no import BookPublisherNo
 from unittest.case import TestCase
 
 from ..abstract import Sample

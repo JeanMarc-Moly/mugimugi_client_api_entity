@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.character.tosaka_rin import (
+from test.resource.xml.sample.book.item.character.tosaka_rin import (
     BookCharacterTosakaRin,
 )
 from unittest.case import TestCase

@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.content.elf import BookContentElf
+from test.resource.xml.sample.book.item.content.elf import BookContentElf
 from unittest.case import TestCase
 
 from ....abstract import Sample
