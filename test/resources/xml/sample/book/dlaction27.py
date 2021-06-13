@@ -1,7 +1,7 @@
 from datetime import date
 
-from mugimugi.entity.main.book import *
-from mugimugi.enum import Language
+from mugimugi_client_api_entity.main.book import *
+from mugimugi_client_api_entity.enum import Language
 
 from .....configuration import SAMPLE
 from ..abstract import Sample
@@ -29,7 +29,7 @@ class BookDLAction27(Sample):
         japanese_name="D.L. action 27",
         romaji_name="ディーエルアクション27",
         other_names=[],
-        _id="B65715",
+        mugimugi_id="B65715",
         version=6,
         match_ratio=None,
         release_date=date(2004, 10, 3),

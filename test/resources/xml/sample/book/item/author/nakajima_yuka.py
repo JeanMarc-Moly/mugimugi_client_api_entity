@@ -1,5 +1,5 @@
-from mugimugi.entity.main.book import Author
-from mugimugi.enum.position import Position
+from mugimugi_client_api_entity.main.book import Author
+from mugimugi_client_api_entity.enum.position import Position
 
 from .......configuration import SAMPLE
 from ....abstract import Sample
@@ -13,7 +13,7 @@ class BookAuthorNakajimaYuka(Sample):
         japanese_name="なかじまゆか",
         romaji_name="ナカジマユカ",
         other_names=["かなじまゆか", "Digital Lover"],
-        _id="A924",
+        mugimugi_id="A924",
         version=15,
         objects_count=485,
         parent=0,

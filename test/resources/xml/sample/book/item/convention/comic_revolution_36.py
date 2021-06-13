@@ -1,6 +1,6 @@
 from datetime import date
 
-from mugimugi.entity.main.book import Convention
+from mugimugi_client_api_entity.main.book import Convention
 
 from .......configuration import SAMPLE
 from ....abstract import Sample
@@ -14,7 +14,7 @@ class BookConventionComicRevolution36(Sample):
         japanese_name="コミックレヴォリューション 36",
         romaji_name="コミックレヴォリューション36",
         other_names=[],
-        _id="N107",
+        mugimugi_id="N107",
         version=2,
         objects_count=696,
         date_start=date(2004, 10, 3),

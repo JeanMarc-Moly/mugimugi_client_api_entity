@@ -1,5 +1,5 @@
-from mugimugi.entity.main.book import Circle
-from mugimugi.enum.position import Position
+from mugimugi_client_api_entity.main.book import Circle
+from mugimugi_client_api_entity.enum.position import Position
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
@@ -13,7 +13,7 @@ class BookCircleDigitalLover(Sample):
         japanese_name="Digital Lover",
         romaji_name="デジタルラバー",
         other_names=[],
-        _id="C180",
+        mugimugi_id="C180",
         version=17,
         objects_count=421,
         parent=0,

@@ -1,5 +1,5 @@
-from mugimugi.entity.main.book import Content
-from mugimugi.enum import Ratio
+from mugimugi_client_api_entity.main.book import Content
+from mugimugi_client_api_entity.enum import Ratio
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
@@ -13,7 +13,7 @@ class BookContentElf(Sample):
         japanese_name="エルフ",
         romaji_name="",
         other_names=[],
-        _id="K39",
+        mugimugi_id="K39",
         version=1,
         objects_count=2803,
         ratio=Ratio.NOT_SET,
