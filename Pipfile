@@ -7,8 +7,6 @@ name = 'pypi'
 python_version = '3.9.5'
 
 [packages]
-httpx = "*"
-multimethod = "*"
 xsdata = "*"
 
 [pipenv]
@@ -21,9 +19,6 @@ black = "*"
 isort = "*"
 mypy = "*"
 pipenv-setup = "*"
-python-dotenv = "*"
-loguru = "*"
-ipykernel = "*"
 
 [scripts]
 install_dev = 'bash script/install_dev.sh'
