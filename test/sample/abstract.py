@@ -20,8 +20,3 @@ class Sample:
                 asdict(self.object),
                 f"Failed to properly parse {path.relative_to(SAMPLE)}",
             )
-            # self.assertDictEqual(
-            #     parse(self.type, f.read()).asdict(),
-            #     self.object.asdict(),
-            #     f"Failed to properly parse {path.relative_to(SAMPLE)}",
-            # )
