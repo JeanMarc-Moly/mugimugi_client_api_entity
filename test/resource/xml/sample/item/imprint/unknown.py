@@ -1,4 +1,4 @@
-from mugimugi_client_api_entity.main import Imprint
+from mugimugi_client_api_entity import Imprint
 
 from ......configuration import SAMPLE
 from ...abstract import Sample

@@ -3,7 +3,7 @@ from enum import Enum
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ..utils.converter import Date
+from ..util.converter import Date
 from .abstract import ElementPrefix
 from .abstract_item import ItemCommon, ItemType
 

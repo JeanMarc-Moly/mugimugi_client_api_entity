@@ -3,7 +3,7 @@ from pathlib import Path
 from test.configuration import SAMPLE
 from typing import Type
 
-from mugimugi_client_api_entity.utils.xml import parse
+from mugimugi_client_api_entity import parse
 
 
 class Sample:

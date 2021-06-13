@@ -1,4 +1,4 @@
-from mugimugi_client_api_entity.main import Collection
+from mugimugi_client_api_entity import Collection
 
 from ......configuration import SAMPLE
 from ...abstract import Sample

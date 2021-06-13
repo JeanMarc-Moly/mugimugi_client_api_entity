@@ -1,4 +1,4 @@
-from mugimugi_client_api_entity.main import Author
+from mugimugi_client_api_entity import Author
 from mugimugi_client_api_entity.main.sub import SubContent
 
 from ......configuration import SAMPLE

@@ -1,4 +1,4 @@
-from mugimugi_client_api_entity.main import Publisher
+from mugimugi_client_api_entity import Publisher
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
