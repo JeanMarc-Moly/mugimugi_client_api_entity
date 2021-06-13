@@ -21,7 +21,12 @@ class LinkableItem(ItemCommon, Generic[LI]):
 
 @dataclass
 class Item(ItemCommon):
+    @dataclass
+    class Linker(AbstractLinker):
+        ...
+
     # Useless but present.
-    _: AbstractLinker = field(
-        default=None, metadata=dict(name=AbstractLinker.Meta.name, type=XmlType.ELEMENT)
+    _: Linker = field(
+        default_factory=dict,
+        metadata=dict(name=Linker.Meta.name, type=XmlType.ELEMENT),
     )

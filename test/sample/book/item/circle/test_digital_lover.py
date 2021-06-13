@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.circle.digital_lover import (
+from test.resource.xml.sample.book.item.circle.digital_lover import (
     BookCircleDigitalLover,
 )
 from unittest.case import TestCase

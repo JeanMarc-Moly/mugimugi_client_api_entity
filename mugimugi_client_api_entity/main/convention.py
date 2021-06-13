@@ -3,9 +3,8 @@ from typing import Iterator, Union
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ..enum.item_type import ItemType
-
 from ..common import ConventionCommon
+from ..enum.item_type import ItemType
 from .abstract_item import Item, LinkableItem
 from .abstract_linker import AbstractLinker
 from .sub import SubCharacter, SubContent, SubParody

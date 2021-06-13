@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.collection.dlaction import (
+from test.resource.xml.sample.book.item.collection.dlaction import (
     BookCollectionDLAction,
 )
 from unittest.case import TestCase

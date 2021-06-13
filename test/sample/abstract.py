@@ -1,9 +1,9 @@
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from test.configuration import SAMPLE
 from typing import Type
 
-from mugimugi_client_api_entity.utils.xml import parse
+from mugimugi_client_api_entity import parse
 
 
 class Sample:
@@ -20,8 +20,3 @@ class Sample:
                 asdict(self.object),
                 f"Failed to properly parse {path.relative_to(SAMPLE)}",
             )
-            # self.assertDictEqual(
-            #     parse(self.type, f.read()).asdict(),
-            #     self.object.asdict(),
-            #     f"Failed to properly parse {path.relative_to(SAMPLE)}",
-            # )

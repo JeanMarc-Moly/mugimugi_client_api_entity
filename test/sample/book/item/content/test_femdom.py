@@ -1,4 +1,4 @@
-from test.resources.xml.sample.book.item.content.femdom import BookContentFemdom
+from test.resource.xml.sample.book.item.content.femdom import BookContentFemdom
 from unittest.case import TestCase
 
 from ....abstract import Sample

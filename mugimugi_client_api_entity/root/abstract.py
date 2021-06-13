@@ -5,7 +5,7 @@ from dataclasses import dataclass
 from typing import TypeVar
 
 from ..enum import ElementNode
-from ..utils.xml import parse
+from ..util.xml import parse
 
 
 @dataclass

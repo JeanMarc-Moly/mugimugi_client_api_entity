@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from enum import Enum
 
-from ...entity.root.empty import EmptyRoot, XmlType
+from .empty import EmptyRoot, XmlType
 
 
 @dataclass
