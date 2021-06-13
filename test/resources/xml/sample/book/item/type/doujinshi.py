@@ -1,4 +1,4 @@
-from mugimugi.entity.main.book import Type
+from mugimugi_client_api_entity.main.book import Type
 
 from .......configuration import SAMPLE
 from ....abstract import Sample
@@ -12,7 +12,7 @@ class BookTypeDoujinshi(Sample):
         japanese_name="同人誌",
         romaji_name="",
         other_names=[],
-        _id="T1",
+        mugimugi_id="T1",
         version=1,
         objects_count=1329929,
     )

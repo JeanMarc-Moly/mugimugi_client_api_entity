@@ -1,6 +1,6 @@
-from mugimugi.entity.main.book import Character
-from mugimugi.enum import Ratio
-from mugimugi.enum.gender import Sex
+from mugimugi_client_api_entity.main.book import Character
+from mugimugi_client_api_entity.enum import Ratio
+from mugimugi_client_api_entity.enum.gender import Sex
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
@@ -14,7 +14,7 @@ class BookCharacterCaster(Sample):
         japanese_name="キャスター",
         romaji_name="キャスター",
         other_names=[],
-        _id="H3465",
+        mugimugi_id="H3465",
         version=13,
         objects_count=125,
         sex=Sex.FEMALE,

@@ -1,4 +1,4 @@
-from mugimugi.entity.main.book import Collection
+from mugimugi_client_api_entity.main.book import Collection
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
@@ -12,7 +12,7 @@ class BookCollectionDLAction(Sample):
         japanese_name="D.L. action",
         romaji_name="",
         other_names=[],
-        _id="O25",
+        mugimugi_id="O25",
         version=1,
         objects_count=109,
     )

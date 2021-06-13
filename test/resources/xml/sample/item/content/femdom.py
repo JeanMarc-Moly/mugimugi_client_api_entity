@@ -1,5 +1,5 @@
-from mugimugi.entity.main.book import Content
-from mugimugi.enum import Ratio
+from mugimugi_client_api_entity.main.book import Content
+from mugimugi_client_api_entity.enum import Ratio
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
@@ -13,7 +13,7 @@ class BookContentFemdom(Sample):
         japanese_name="女性支配・女王様・ドミナ",
         romaji_name="",
         other_names=[],
-        _id="K48",
+        mugimugi_id="K48",
         version=2,
         objects_count=7083,
         ratio=Ratio.NOT_SET,

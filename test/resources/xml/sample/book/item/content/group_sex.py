@@ -1,5 +1,5 @@
-from mugimugi.entity.main.book import Content
-from mugimugi.enum import Ratio
+from mugimugi_client_api_entity.main.book import Content
+from mugimugi_client_api_entity.enum import Ratio
 
 from .......configuration import SAMPLE
 from ....abstract import Sample
@@ -13,7 +13,7 @@ class BookContentGroupSex(Sample):
         japanese_name="グループセックス",
         romaji_name="",
         other_names=["乱交"],
-        _id="K66",
+        mugimugi_id="K66",
         version=4,
         objects_count=39263,
         ratio=Ratio.NOT_SET,
