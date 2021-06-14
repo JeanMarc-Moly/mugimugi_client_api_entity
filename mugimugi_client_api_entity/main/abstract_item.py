@@ -27,6 +27,6 @@ class Item(ItemCommon):
 
     # Useless but present.
     _: Linker = field(
-        default_factory=dict,
+        default_factory=Linker,
         metadata=dict(name=Linker.Meta.name, type=XmlType.ELEMENT),
     )

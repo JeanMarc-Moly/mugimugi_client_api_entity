@@ -22,7 +22,7 @@ class Convention(ConventionCommon, LinkableItem[LI]):
         )
 
     _links: Linker = field(
-        default=None, metadata=dict(name=AbstractLinker.Meta.name, type=XmlType.ELEMENT)
+        default_factory=Linker, metadata=dict(name=AbstractLinker.Meta.name, type=XmlType.ELEMENT)
     )
 
     @property

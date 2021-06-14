@@ -19,7 +19,7 @@ class Character(CharacterCommon, LinkableItem[SubContent]):
         )
 
     _links: Linker = field(
-        default=None,
+        default_factory=Linker,
         metadata=dict(
             name=AbstractLinker.Meta.name, type=XmlType.ELEMENT, min_occurs=0
         ),
