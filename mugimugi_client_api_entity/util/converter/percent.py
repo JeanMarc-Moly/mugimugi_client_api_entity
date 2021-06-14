@@ -1,5 +1,4 @@
 from typing import TypeVar
-
 from xsdata.formats.converter import Converter, converter
 
 Percent = TypeVar("Percent", bound=str)
@@ -12,7 +11,7 @@ class PercentConverter(Converter):
 
     @staticmethod
     def serialize(value: float, **_) -> Percent:
-        return f"{value:.2f}%"
+        return Percent(f"{value:.2f}%")
 
 
 converter.register_converter(Percent, PercentConverter())
