@@ -1,5 +1,5 @@
 from datetime import date, datetime
-from typing import Optional, TypeVar
+from typing import Optional
 
 from xsdata.formats.converter import Converter, converter
 
@@ -11,7 +11,7 @@ class DateConverter(Converter):
     FORMAT = "%Y-%m-%d"
 
     @classmethod
-    def deserialize(cls, value: str, **_) -> Date:
+    def deserialize(cls, value: str, **_) -> Optional[Date]:
         if value == cls.NO_DATE:
             return None
         return datetime.strptime(value, cls.FORMAT).date()
