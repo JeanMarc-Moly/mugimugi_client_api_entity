@@ -4,7 +4,6 @@ from typing import Iterator, Union
 from xsdata.formats.dataclass.models.elements import XmlType
 
 from ..common import CircleCommon
-from ..enum.item_type import ItemType
 from .abstract_item import Item, LinkableItem
 from .abstract_linker import AbstractLinker
 from .sub import SubAuthor, SubContent
@@ -30,14 +29,12 @@ class Circle(CircleCommon, LinkableItem[LI]):
 
     @property
     def contents(self) -> Iterator[SubContent]:
-        type_ = ItemType.CONTENT
         for e in self._links.items:
-            if e.type is type_:
+            if isinstance(e, SubContent):
                 yield e
 
     @property
     def authors(self) -> Iterator[SubAuthor]:
-        type_ = ItemType.AUTHOR
         for e in self._links.items:
-            if e.type is type_:
+            if isinstance(e, SubAuthor):
                 yield e
