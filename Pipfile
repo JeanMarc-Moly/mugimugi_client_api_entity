@@ -7,7 +7,7 @@ name = 'pypi'
 python_version = '3.9.5'
 
 [packages]
-xsdata = "*"
+xsdata = { version = "*", extras = ["cli"] }
 
 [pipenv]
 allow_prereleases = true
@@ -25,4 +25,5 @@ install_dev = 'bash script/install_dev.sh'
 format = 'bash script/format.sh'
 upgrade = 'bash script/upgrade.sh'
 check = 'bash script/check.sh'
+generate = 'bash script/generate.sh'
 test = 'python -m unittest discover test'
