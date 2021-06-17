@@ -20,6 +20,6 @@ class PublisherCommon(ItemCommon):
             pattern=fr"{ElementPrefix.PUBLISHER.value}\d+",
         ),
     )
-    type: Type = field(
+    _type_validator: Type = field(
         metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
     )

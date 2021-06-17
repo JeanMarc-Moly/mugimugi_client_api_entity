@@ -20,5 +20,5 @@ class BookCharacterCaster(Sample[Character]):
         sex=Sex.FEMALE,
         age="",
         ratio=Ratio.NOT_SET,
-        type=Character.Type.TYPE,
+        _type_validator=Character.Type.TYPE,
     )

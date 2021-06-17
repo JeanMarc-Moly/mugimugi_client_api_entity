@@ -20,7 +20,7 @@ class AuthorCommon(ItemCommon):
             pattern=fr"{ElementPrefix.AUTHOR.value}\d+",
         ),
     )
-    type: Type = field(
+    _type_validator: Type = field(
         metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
     )
     parent: int = field(

@@ -21,7 +21,7 @@ class ConventionCommon(ItemCommon):
             pattern=fr"{ElementPrefix.CONVENTION.value}\d+",
         ),
     )
-    type: Type = field(
+    _type_validator: Type = field(
         metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
     )
     date_start: Date = field(

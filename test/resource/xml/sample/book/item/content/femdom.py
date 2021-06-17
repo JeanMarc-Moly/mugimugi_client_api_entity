@@ -18,5 +18,5 @@ class BookContentFemdom(Sample[Content]):
         version=2,
         objects_count=7083,
         ratio=Ratio.NOT_SET,
-        type=Content.Type.TYPE,
+        _type_validator=Content.Type.TYPE,
     )

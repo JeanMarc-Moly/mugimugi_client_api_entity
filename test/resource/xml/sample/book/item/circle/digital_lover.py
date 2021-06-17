@@ -19,5 +19,5 @@ class BookCircleDigitalLover(Sample[Circle]):
         objects_count=421,
         parent=0,
         position=Position.MAIN,
-        type=Circle.Type.TYPE,
+        _type_validator=Circle.Type.TYPE,
     )

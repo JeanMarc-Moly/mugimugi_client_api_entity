@@ -1,5 +1,7 @@
 from abc import ABC
 from dataclasses import dataclass, field
+from enum import Enum
+from ...enum import ItemType
 
 from xsdata.formats.dataclass.models.elements import XmlType
 

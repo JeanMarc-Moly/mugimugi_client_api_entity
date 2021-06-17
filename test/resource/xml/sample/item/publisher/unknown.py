@@ -17,5 +17,5 @@ class PublisherUnknown(Sample[Publisher]):
         _id="L1",
         version=1,
         objects_count=70513,
-        type=Publisher.Type.TYPE,
+        _type_validator=Publisher.Type.TYPE,
     )

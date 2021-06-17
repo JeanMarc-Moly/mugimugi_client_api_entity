@@ -16,5 +16,5 @@ class BookContentGroupSex(Sample[Content]):
         version=4,
         objects_count=39263,
         ratio=Ratio.NOT_SET,
-        type=Content.Type.TYPE,
+        _type_validator=Content.Type.TYPE,
     )

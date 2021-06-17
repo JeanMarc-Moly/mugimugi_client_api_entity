@@ -17,5 +17,5 @@ class ContentUnknown(Sample[Content]):
         _id="K1",
         version=1,
         objects_count=1590669,
-        type=Content.Type.TYPE,
+        _type_validator=Content.Type.TYPE,
     )

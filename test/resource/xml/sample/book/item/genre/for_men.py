@@ -18,5 +18,5 @@ class BookGenreForMen(Sample[Genre]):
         version=1,
         objects_count=346049,
         ratio=Ratio.NOT_SET,
-        type=Genre.Type.TYPE,
+        _type_validator=Genre.Type.TYPE,
     )

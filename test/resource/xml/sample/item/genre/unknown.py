@@ -17,5 +17,5 @@ class GenreUnknown(Sample[Genre]):
         _id="G1",
         version=2,
         objects_count=174,
-        type=Genre.Type.TYPE,
+        _type_validator=Genre.Type.TYPE,
     )

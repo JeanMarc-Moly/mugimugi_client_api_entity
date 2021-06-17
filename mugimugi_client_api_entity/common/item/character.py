@@ -20,7 +20,7 @@ class CharacterCommon(ItemCommon):
             pattern=fr"{ElementPrefix.CHARACTER.value}\d+",
         ),
     )
-    type: Type = field(
+    _type_validator: Type = field(
         metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
     )
     sex: Sex = field(

@@ -19,5 +19,5 @@ class BookAuthorNakajimaYuka(Sample[Author]):
         objects_count=485,
         parent=0,
         position=Position.MAIN,
-        type=Author.Type.TYPE,
+        _type_validator=Author.Type.TYPE,
     )

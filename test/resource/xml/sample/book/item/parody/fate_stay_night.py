@@ -18,5 +18,5 @@ class BookParodyFateStayNight(Sample[Parody]):
         version=29,
         objects_count=5268,
         ratio=Ratio.NOT_SET,
-        type=Parody.Type.TYPE,
+        _type_validator=Parody.Type.TYPE,
     )

@@ -16,5 +16,5 @@ class BookTypeDoujinshi(Sample[Type]):
         _id="T1",
         version=1,
         objects_count=1329929,
-        type=Type.Type.TYPE,
+        _type_validator=Type.Type.TYPE,
     )

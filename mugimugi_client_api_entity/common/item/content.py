@@ -20,6 +20,6 @@ class ContentCommon(ItemCommon):
             pattern=fr"{ElementPrefix.CONTENT.value}\d+",
         ),
     )
-    type: Type = field(
+    _type_validator: Type = field(
         metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
     )

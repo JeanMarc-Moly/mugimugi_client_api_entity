@@ -14,5 +14,5 @@ class BookPublisherNo(Sample[Publisher]):
         _id="L3",
         version=2,
         objects_count=1492741,
-        type=Publisher.Type.TYPE,
+        _type_validator=Publisher.Type.TYPE,
     )

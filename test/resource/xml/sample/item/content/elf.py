@@ -16,5 +16,5 @@ class BookContentElf(Sample[Content]):
         version=1,
         objects_count=2803,
         ratio=Ratio.NOT_SET,
-        type=Content.Type.TYPE,
+        _type_validator=Content.Type.TYPE,
     )

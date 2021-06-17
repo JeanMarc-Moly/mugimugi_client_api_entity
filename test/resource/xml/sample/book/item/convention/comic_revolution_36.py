@@ -19,5 +19,5 @@ class BookConventionComicRevolution36(Sample[Convention]):
         objects_count=696,
         date_start=date(2004, 10, 3),
         date_end=date(2004, 10, 3),
-        type=Convention.Type.TYPE,
+        _type_validator=Convention.Type.TYPE,
     )

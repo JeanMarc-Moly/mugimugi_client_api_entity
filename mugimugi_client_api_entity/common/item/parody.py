@@ -20,6 +20,6 @@ class ParodyCommon(ItemCommon):
             pattern=fr"{ElementPrefix.PARODY.value}\d+",
         ),
     )
-    type: Type = field(
+    _type_validator: Type = field(
         metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
     )

@@ -18,7 +18,7 @@ class BookAuthorSekiyaAsami(Sample[Author]):
         version=14,
         parent=0,
         objects_count=217,
-        type=Author.Type.TYPE,
+        _type_validator=Author.Type.TYPE,
         _links=Author.Linker(
             items=[
                 SubContent(
@@ -29,7 +29,7 @@ class BookAuthorSekiyaAsami(Sample[Author]):
                     other_names=["近親相姦"],
                     version=5,
                     objects_count=13054,
-                    type=SubContent.Type.TYPE,
+                    _type_validator=SubContent.Type.TYPE,
                 ),
                 SubContent(
                     _id="K15",
@@ -39,7 +39,7 @@ class BookAuthorSekiyaAsami(Sample[Author]):
                     other_names=["lolicon", "lolikon", "rorikon", "ロリコン"],
                     version=3,
                     objects_count=74960,
-                    type=SubContent.Type.TYPE,
+                    _type_validator=SubContent.Type.TYPE,
                 ),
                 SubContent(
                     _id="K601",
@@ -48,7 +48,7 @@ class BookAuthorSekiyaAsami(Sample[Author]):
                     katakana_name="",
                     version=3,
                     objects_count=20327,
-                    type=SubContent.Type.TYPE,
+                    _type_validator=SubContent.Type.TYPE,
                 ),
             ]
         ),

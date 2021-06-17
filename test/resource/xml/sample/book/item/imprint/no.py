@@ -16,5 +16,5 @@ class BookImprintNo(Sample[Imprint]):
         _id="I2",
         version=2,
         objects_count=848115,
-        type=Imprint.Type.TYPE,
+        _type_validator=Imprint.Type.TYPE,
     )

@@ -14,5 +14,5 @@ class BookCollectionDLAction(Sample[Collection]):
         _id="O25",
         version=1,
         objects_count=109,
-        type=Collection.Type.TYPE,
+        _type_validator=Collection.Type.TYPE,
     )

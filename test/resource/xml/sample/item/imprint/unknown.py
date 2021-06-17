@@ -17,5 +17,5 @@ class ImprintUnknown(Sample[Imprint]):
         _id="I1",
         version=1,
         objects_count=15083,
-        type=Imprint.Type.TYPE,
+        _type_validator=Imprint.Type.TYPE,
     )

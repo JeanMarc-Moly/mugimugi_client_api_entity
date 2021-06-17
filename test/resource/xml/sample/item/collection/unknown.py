@@ -17,5 +17,5 @@ class CollectionUnknown(Sample[Collection]):
         _id="O1",
         version=2,
         objects_count=37,
-        type=Collection.Type.TYPE,
+        _type_validator=Collection.Type.TYPE,
     )
