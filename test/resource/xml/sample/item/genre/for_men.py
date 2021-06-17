@@ -5,16 +5,16 @@ from ......configuration import SAMPLE
 from ...abstract import Sample
 
 
-class BookGenreForMen(Sample):
+class BookGenreForMen(Sample[Genre]):
     file_path = SAMPLE / "book/item/genre/for_men.xml"
-    type = Genre
     object = Genre(
         english_name="For men",
         japanese_name="男性向け",
-        romaji_name="",
+        katakana_name="",
         other_names=[],
-        mugimugi_id="G227",
+        _id="G227",
         version=1,
         objects_count=346049,
         ratio=Ratio.NOT_SET,
+        type=Genre.Type.TYPE,
     )

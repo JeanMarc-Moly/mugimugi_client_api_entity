@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import Generic, TypeVar
 
-from ...common.abstract import Element
+from ...common import Element
 from ..empty import EmptyRoot
 
 E = TypeVar("E", bound=Element)

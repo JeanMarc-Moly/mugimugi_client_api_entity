@@ -1,16 +1,15 @@
+from abc import ABC
 from dataclasses import dataclass, field
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...common import ContentCommon
+from ...common import ContentCommon, Named
 from ...enum import Ratio
-from .abstract import LinkedPartialItem
 
 
 @dataclass
-class Content(ContentCommon, LinkedPartialItem):
+class LinkedPartialContent(ContentCommon, ABC):
     ratio: Ratio = field(
-        default=None,
         metadata=dict(
             name="FRQ",
             type=XmlType.ATTRIBUTE,
@@ -19,3 +18,8 @@ class Content(ContentCommon, LinkedPartialItem):
             max_inclusive=5,
         ),
     )
+
+
+@dataclass
+class Content(Named, LinkedPartialContent):
+    ...

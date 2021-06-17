@@ -1,7 +1,10 @@
 from typing import TypeVar
+
 from xsdata.formats.converter import Converter, converter
 
-Percent = TypeVar("Percent", bound=str)
+
+class Percent(str):
+    ...
 
 
 class PercentConverter(Converter):

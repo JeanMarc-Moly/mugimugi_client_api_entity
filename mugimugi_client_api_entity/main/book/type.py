@@ -2,15 +2,12 @@ from dataclasses import dataclass, field
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...common import TypeCommon
-from .abstract import LinkedPartialItem
+from ...common import Named, TypeCommon
 
 
 @dataclass
-class Type(TypeCommon, LinkedPartialItem):
+class Type(Named, TypeCommon):
     # FRQ present but useless
     _: int = field(
-        init=False,
-        default=0,
-        metadata=dict(name="FRQ", type=XmlType.ATTRIBUTE, required=True),
+        init=False, default=0, metadata=dict(name="FRQ", type=XmlType.ATTRIBUTE)
     )

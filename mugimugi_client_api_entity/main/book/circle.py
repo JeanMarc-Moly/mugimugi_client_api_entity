@@ -1,16 +1,15 @@
+from abc import ABC
 from dataclasses import dataclass, field
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...common import CircleCommon
+from ...common import CircleCommon, Named
 from ...enum import Position
-from .abstract import LinkedPartialItem
 
 
 @dataclass
-class Circle(CircleCommon, LinkedPartialItem):
+class LinkedPartialCircle(CircleCommon, ABC):
     position: Position = field(
-        default=None,
         metadata=dict(
             name="FRQ",
             type=XmlType.ATTRIBUTE,
@@ -19,3 +18,8 @@ class Circle(CircleCommon, LinkedPartialItem):
             max_inclusive=2,
         ),
     )
+
+
+@dataclass
+class Circle(Named, LinkedPartialCircle):
+    ...

@@ -52,7 +52,7 @@ class ErrorCommon:
         Error.IMAGE_TOO_BIG: ImageTooBig,
     }
 
-    id: int = field(
+    number: int = field(
         metadata=dict(name="code", type="Attribute", required=True, min_inclusive=0)
     )
     description: str = field(metadata=dict(name="EXACT", type=XmlType.ELEMENT))

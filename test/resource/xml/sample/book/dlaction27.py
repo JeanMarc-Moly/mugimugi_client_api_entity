@@ -2,6 +2,7 @@ from datetime import date
 
 from mugimugi_client_api_entity.enum import Language
 from mugimugi_client_api_entity.main.book import *
+from mugimugi_client_api_entity.util.converter import Percent
 
 from .....configuration import SAMPLE
 from ..abstract import Sample
@@ -21,17 +22,16 @@ from .item.publisher.no import BookPublisherNo
 from .item.type.doujinshi import BookTypeDoujinshi
 
 
-class BookDLAction27(Sample):
+class BookDLAction27(Sample[Book]):
     file_path = SAMPLE / "book/dlaction27.xml"
-    type = Book
     object = Book(
         english_name="D.L. action 27",
         japanese_name="D.L. action 27",
-        romaji_name="ディーエルアクション27",
+        katakana_name="ディーエルアクション27",
         other_names=[],
-        mugimugi_id="B65715",
+        _id="B65715",
         version=6,
-        match_ratio=None,
+        match_ratio=Percent("87%"),
         release_date=date(2004, 10, 3),
         isbn="",
         pages_count=28,

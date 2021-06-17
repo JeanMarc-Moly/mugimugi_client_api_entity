@@ -1,18 +1,21 @@
+from typing import get_type_hints
+
 from mugimugi_client_api_entity import Publisher
+from mugimugi_client_api_entity.enum import ItemType
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
 
 
-class PublisherUnknown(Sample):
+class PublisherUnknown(Sample[Publisher]):
     file_path = SAMPLE / "item/publisher/unknown.xml"
-    type = Publisher
     object = Publisher(
         english_name="Unknown",
         japanese_name="不詳",
-        romaji_name="",
+        katakana_name="",
         other_names=[],
-        mugimugi_id="L1",
+        _id="L1",
         version=1,
         objects_count=70513,
+        type=Publisher.Type.TYPE,
     )
