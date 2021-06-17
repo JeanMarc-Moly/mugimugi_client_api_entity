@@ -1,5 +1,6 @@
 from pathlib import Path
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
 
 with (Path(__file__).resolve().parent / "README.md").open(encoding="utf-8") as f:
     long_description = f.read()
