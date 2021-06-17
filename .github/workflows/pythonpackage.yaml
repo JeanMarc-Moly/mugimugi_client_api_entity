@@ -2,7 +2,7 @@ name: Python package
 
 on:
   workflow_run:
-    workflows: ["CI build"]
+    workflows: ["Format"]
     types:
       - completed
 
@@ -15,48 +15,20 @@ jobs:
         python-version: [3.9]
 
     steps:
-      - uses: actions/checkout
+      - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install mypy
-        run: pip install mypy
-
-  format:
-    runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 1
-      matrix:
-        python-version: [3.9]
-
-    steps:
-      - uses: actions/checkout
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python
-        with:
-          python-version: ${{ matrix.python-version }}
-      - name: Install Black
-        run: pip install black
-      - name: Install isort
-        run: pip install isort
-      - name: Run black --check .
-        run: black --check .
-      - name: If needed, commit black changes to the pull request
-        if: failure()
-        run: |
-          isort .
-          black .
-          git config --global user.name 'github-action-format'
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-          git checkout $GITHUB_HEAD_REF
-          git commit --amend --no-edit
-          git push
+      - name: pipenv
+        run: pip install pipenv
+      - name: check code
+        run: pipenv run check
+      - name: test code
+        run: pipenv run test
 
   package:
-    needs:
-      - validate
-      - format
+    needs: validate
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
@@ -64,9 +36,9 @@ jobs:
         python-version: [3.9]
 
     steps:
-      - uses: actions/checkout@
+      - uses: actions/checkout@v2@
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@
+        uses: actions/setup-python@v2@
         with:
           python-version: ${{ matrix.python-version }}
       - name: pipenv
