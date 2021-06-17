@@ -3,9 +3,9 @@ from typing import Iterator, Union
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...common.book import BookCommon
-from ..abstract_item import Item
+from ...common import BookCommon, Named
 from ..abstract_linker import AbstractLinker
+from ..item.abstract import Item
 from .author import Author
 from .character import Character
 from .circle import Circle
@@ -34,7 +34,7 @@ LI = Union[
 
 
 @dataclass
-class Book(BookCommon):
+class Book(Named, BookCommon):
     @dataclass
     class Linker:
         items: list[LI] = field(
@@ -43,7 +43,8 @@ class Book(BookCommon):
         )
 
     _links: Linker = field(
-        default=None, metadata=dict(name=AbstractLinker.Meta.name, type=XmlType.ELEMENT)
+        default_factory=Linker,
+        metadata=dict(name=AbstractLinker.Meta.name, type=XmlType.ELEMENT),
     )
 
     @property

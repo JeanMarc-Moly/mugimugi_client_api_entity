@@ -1,18 +1,20 @@
+from typing import get_type_hints
+
 from mugimugi_client_api_entity.main.book import Type
 
 from .......configuration import SAMPLE
 from ....abstract import Sample
 
 
-class BookTypeDoujinshi(Sample):
+class BookTypeDoujinshi(Sample[Type]):
     file_path = SAMPLE / "book/item/type/doujinshi.xml"
-    type = Type
     object = Type(
         english_name="Doujinshi",
         japanese_name="同人誌",
-        romaji_name="",
+        katakana_name="",
         other_names=[],
-        mugimugi_id="T1",
+        _id="T1",
         version=1,
         objects_count=1329929,
+        type=Type.Type.TYPE,
     )

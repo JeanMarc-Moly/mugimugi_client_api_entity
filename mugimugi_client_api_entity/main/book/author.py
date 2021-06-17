@@ -1,16 +1,15 @@
+from abc import ABC
 from dataclasses import dataclass, field
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...common import AuthorCommon
+from ...common import AuthorCommon, Named
 from ...enum import Position
-from .abstract import LinkedPartialItem
 
 
 @dataclass
-class Author(AuthorCommon, LinkedPartialItem):
+class LinkedPartialAuthor(AuthorCommon, ABC):
     position: Position = field(
-        default=None,
         metadata=dict(
             name="FRQ",
             type=XmlType.ATTRIBUTE,
@@ -19,3 +18,8 @@ class Author(AuthorCommon, LinkedPartialItem):
             max_inclusive=2,
         ),
     )
+
+
+@dataclass
+class Author(Named, LinkedPartialAuthor):
+    ...

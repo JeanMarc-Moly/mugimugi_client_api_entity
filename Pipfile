@@ -8,6 +8,7 @@ python_version = '3.9.5'
 
 [packages]
 xsdata = "*"
+# xsdata = { path = "/home/oji/dev/xsdata", editable = true }
 
 [pipenv]
 allow_prereleases = true

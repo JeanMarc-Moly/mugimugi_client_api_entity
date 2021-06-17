@@ -1,18 +1,21 @@
+from typing import get_type_hints
+
 from mugimugi_client_api_entity import Collection
+from mugimugi_client_api_entity.enum import ItemType
 
 from ......configuration import SAMPLE
 from ...abstract import Sample
 
 
-class CollectionUnknown(Sample):
+class CollectionUnknown(Sample[Collection]):
     file_path = SAMPLE / "item/collection/unknown.xml"
-    type = Collection
     object = Collection(
         english_name="UNKNOWN",
         japanese_name="不詳",
-        romaji_name="",
+        katakana_name="",
         other_names=[],
-        mugimugi_id="O1",
+        _id="O1",
         version=2,
         objects_count=37,
+        type=Collection.Type.TYPE,
     )

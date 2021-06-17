@@ -1,0 +1,25 @@
+from dataclasses import dataclass, field
+from enum import Enum
+
+from xsdata.formats.dataclass.models.elements import XmlType
+
+from ...enum import ElementPrefix, ItemType
+from .abstract import ItemCommon
+
+
+@dataclass
+class PublisherCommon(ItemCommon):
+    class Type(Enum):
+        TYPE = ItemType.PUBLISHER
+
+    _id: str = field(
+        metadata=dict(
+            name="ID",
+            type=XmlType.ATTRIBUTE,
+            required=True,
+            pattern=fr"{ElementPrefix.PUBLISHER.value}\d+",
+        ),
+    )
+    type: Type = field(
+        metadata=dict(name="TYPE", type=XmlType.ATTRIBUTE, required=True),
+    )

@@ -25,7 +25,7 @@ setup(
     extras_require={
         "dev": [
             "appdirs==1.4.4",
-            "astroid==2.5.8; python_version ~= '3.6'",
+            "astroid==2.6.0.dev0; python_version ~= '3.6'",
             "attrs==21.2.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "backcall==0.2.0",
             "black==19.10b0",
