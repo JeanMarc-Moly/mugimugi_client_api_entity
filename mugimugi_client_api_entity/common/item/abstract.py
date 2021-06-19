@@ -1,10 +1,9 @@
 from abc import ABC
 from dataclasses import dataclass, field
-from enum import Enum
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
-from ...enum import ElementNode, ItemType
+from ...enum import ElementNode
 from ..element import Element
 
 
