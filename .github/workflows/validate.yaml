@@ -1,5 +1,4 @@
-name: Python package
-
+name: Validate
 on:
   workflow_run:
     workflows: ["Format"]
@@ -7,7 +6,7 @@ on:
       - completed
 
 jobs:
-  validate:
+  check:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
@@ -22,13 +21,12 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: pipenv
         run: pip install pipenv
+      - name: Install dependencies
+        run: pipenv install --deploy
       - name: check code
         run: pipenv run check
-      - name: test code
-        run: pipenv run test
 
-  package:
-    needs: validate
+  test:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
@@ -36,12 +34,14 @@ jobs:
         python-version: [3.9]
 
     steps:
-      - uses: actions/checkout@v2@
+      - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2@
+        uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
       - name: pipenv
         run: pip install pipenv
       - name: Install dependencies
         run: pipenv install --deploy
+      - name: test code
+        run: pipenv run test

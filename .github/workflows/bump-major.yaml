@@ -1,0 +1,27 @@
+name: Bump Major
+on:
+  workflow_run:
+    workflows: ["Validate"]
+    types:
+      - completed
+
+jobs:
+  tag-major:
+    needs: [check, test, format]
+    runs-on: ubuntu-latest
+    if: "startsWith(github.event.head_commit.message, 'Evolution: ')"
+    steps:
+      - name: pipenv
+        run: pip install pipenv
+      - name: Install dependencies
+        run: pipenv install --deploy
+      - name: Bump major
+        run: pipenv run bump major
+      - name: Amend
+        run: |
+          git config user.name 'github-action-format'
+          git config user.email 'github-action-format@github.com'
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
+          git checkout ${{ steps.extract_branch.outputs.branch }}
+          git commit --amend --no-edit
+          git push --force

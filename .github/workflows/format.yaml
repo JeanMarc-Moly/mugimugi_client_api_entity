@@ -1,8 +1,9 @@
 name: Format
-
 on:
   push:
-    branches: [master, develop]
+    branches:
+      - main
+      - develop
 
 jobs:
   format:
@@ -13,10 +14,6 @@ jobs:
         python-version: [3.9]
 
     steps:
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
@@ -26,15 +23,13 @@ jobs:
         run: pip install black
       - name: Install isort
         run: pip install isort
-      - name: Run black --check .
-        run: black --check .
-      - name: If needed, commit black changes to the pull request
-        if: failure()
+      - name: Commit isort & black changes to the push request
         run: |
           isort .
           black .
-          git config --global user.name 'github-action-format'
+          git config user.name 'github-action-format'
+          git config user.email 'github-action-format@github.com'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
           git checkout ${{ steps.extract_branch.outputs.branch }}
           git commit --amend --no-edit
-          git push
+          git push --force

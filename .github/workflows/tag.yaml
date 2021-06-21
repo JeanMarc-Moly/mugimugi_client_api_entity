@@ -1,0 +1,19 @@
+name: Tag
+on:
+  workflow_run:
+    workflows: ["Bump Major", "Bump Minor", "Bump Patch"]
+    types:
+      - completed
+
+jobs:
+  update-setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Read version
+        id: version
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./.version
+      - name: Tag version
+        run: echo "${{ steps.version.outputs.content }}"
