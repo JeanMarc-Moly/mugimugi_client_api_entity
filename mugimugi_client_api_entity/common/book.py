@@ -54,7 +54,7 @@ class BookCommon(Element):
     is_copybook: bool = field(
         metadata=dict(name="DATA_COPYSHI", type=XmlType.ELEMENT, required=True),
     )
-    magazine: int = field(
+    magazine: bool = field(
         metadata=dict(name="DATA_MAGAZINE", type=XmlType.ELEMENT, required=True),
     )
     language: Language = field(
