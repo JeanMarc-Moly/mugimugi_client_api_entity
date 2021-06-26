@@ -1,9 +1,8 @@
 from warnings import catch_warnings, filterwarnings, simplefilter
 
-from xsdata.exceptions import ConverterWarning
+from xsdata.exceptions import ConverterWarning, ParserError
 from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.parsers.config import ParserConfig
-from xsdata.formats.dataclass.parsers.nodes import ParserError
 
 PARSER = XmlParser(config=ParserConfig(fail_on_unknown_properties=True)).from_string
 

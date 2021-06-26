@@ -14,7 +14,7 @@ class AbstractRoot(ABC):
         name = ElementNode.LIST.value
 
     @classmethod
-    def parse(cls: U, xml: str) -> U:
+    def parse(cls: type[U], xml: str) -> U:
         return parse(cls, xml)
 
 

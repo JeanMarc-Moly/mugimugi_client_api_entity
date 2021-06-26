@@ -1,12 +1,16 @@
 from pathlib import Path
-from setuptools import setup, find_packages
 
-with (Path(__file__).resolve().parent / "README.md").open(encoding="utf-8") as f:
+from setuptools import find_packages, setup
+
+project = Path(__file__).resolve().parent
+with (project / "README.md").open(encoding="utf-8") as f:
     long_description = f.read()
+with (project / "VERSION").open(encoding="utf-8") as f:
+    version = f.read()
 
 setup(
     name="mugimugi-client-api-entity",
-    version="0.4.0",
+    version=version,
     description="Mugimugi api client entities parser",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -25,7 +29,7 @@ setup(
     extras_require={
         "dev": [
             "appdirs==1.4.4",
-            "astroid==2.5.8; python_version ~= '3.6'",
+            "astroid==2.6.0.dev0; python_version ~= '3.6'",
             "attrs==21.2.0; python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4'",
             "backcall==0.2.0",
             "black==19.10b0",

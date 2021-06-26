@@ -6,17 +6,17 @@ from ......configuration import SAMPLE
 from ...abstract import Sample
 
 
-class BookConventionComicRevolution36(Sample):
+class BookConventionComicRevolution36(Sample[Convention]):
     file_path = SAMPLE / "book/item/convention/comic_revolution_36.xml"
-    type = Convention
     object = Convention(
         english_name="Comic Revolution 36",
         japanese_name="コミックレヴォリューション 36",
-        romaji_name="コミックレヴォリューション36",
+        katakana_name="コミックレヴォリューション36",
         other_names=[],
-        mugimugi_id="N107",
+        _id="N107",
         version=2,
         objects_count=696,
         date_start=date(2004, 10, 3),
         date_end=date(2004, 10, 3),
+        _type_validator=Convention.Type.TYPE,
     )

@@ -1,7 +1,9 @@
+from abc import ABC
+
 from ..enum import ElementNode
 
 
-class AbstractLinker:
+class AbstractLinker(ABC):
     class Meta:
         name = ElementNode.LINK.value
 

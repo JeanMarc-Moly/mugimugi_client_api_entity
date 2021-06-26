@@ -1,5 +1,5 @@
 from test.resource.xml.sample.item.publisher.unknown import PublisherUnknown
-from unittest.case import TestCase
+from unittest import TestCase
 
 from ...abstract import Sample
 

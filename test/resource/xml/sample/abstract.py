@@ -1,8 +1,11 @@
 from pathlib import Path
-from typing import Type
+from typing import Generic, TypeVar
+
+from mugimugi_client_api_entity.common import Element
+
+E = TypeVar("E", bound=Element)
 
 
-class Sample:
+class Sample(Generic[E]):
     file_path: Path
-    object: object
-    type: Type
+    object: E
