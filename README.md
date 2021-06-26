@@ -18,14 +18,14 @@ parse(
 ```
 ```python
 Collection(
-    _id='O1',
-    _type_validator=<Type.TYPE: <ItemType.COLLECTION: 'collections'>>,
     english_name='UNKNOWN',
     japanese_name='不詳',
     katakana_name='',
     other_names=[],
     version=2,
     objects_count=37,
+    _id='O1',
+    _type_validator=<Type.TYPE: <ItemType.COLLECTION: 'collections'>>,
     _=Item.Linker()
 )
 ```
