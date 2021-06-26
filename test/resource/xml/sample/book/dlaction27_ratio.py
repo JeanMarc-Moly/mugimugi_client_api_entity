@@ -2,6 +2,7 @@ from datetime import date
 
 from mugimugi_client_api_entity.enum import Language
 from mugimugi_client_api_entity.main.book import *
+from mugimugi_client_api_entity.util.converter import Percent
 
 from .....configuration import SAMPLE
 from ..abstract import Sample
@@ -30,6 +31,7 @@ class BookDLAction27(Sample[Book]):
         other_names=[],
         _id="B65715",
         version=6,
+        match_ratio=Percent("87%"),
         release_date=date(2004, 10, 3),
         isbn="",
         pages_count=28,
