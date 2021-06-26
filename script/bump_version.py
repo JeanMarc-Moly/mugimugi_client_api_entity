@@ -20,7 +20,7 @@ except ValueError:
     print(f"Invalid bump type {argv[1]!r}, try: {', '.join(t.value for t in BumpType)}")
     exit(1)
 
-with (Path(__file__).resolve().parents[1] / ".version").open(
+with (Path(__file__).resolve().parents[1] / "VERSION").open(
     mode="r+", encoding="utf-8"
 ) as f:
     major, minor, patch = f.readline().split(".")
