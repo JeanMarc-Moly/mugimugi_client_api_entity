@@ -1,4 +1,5 @@
 from dataclasses import dataclass, field
+from typing import ClassVar, Literal
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
@@ -12,12 +13,14 @@ class BookCommon(Element):
     class Meta:
         name = ElementNode.BOOK.value
 
+    PREFIX: ClassVar[Literal[ElementPrefix.BOOK]] = ElementPrefix.BOOK
+
     _id: str = field(
         metadata=dict(
             name="ID",
             type=XmlType.ATTRIBUTE,
             required=True,
-            pattern=fr"{ElementPrefix.BOOK.value}\d+",
+            pattern=fr"{PREFIX.value}\d+",
         ),
     )
     version: int = field(

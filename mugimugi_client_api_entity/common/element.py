@@ -1,5 +1,6 @@
 from abc import ABC
 from dataclasses import dataclass, field
+from typing import ClassVar
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
@@ -8,6 +9,9 @@ from ..enum import ElementPrefix
 
 @dataclass
 class Element(ABC):
+
+    PREFIX: ClassVar[ElementPrefix]
+
     _id: str = field(
         metadata=dict(
             name="ID",

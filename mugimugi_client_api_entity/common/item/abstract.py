@@ -1,5 +1,7 @@
 from abc import ABC
 from dataclasses import dataclass, field
+from mugimugi_client_api_entity.enum.element_prefix import ElementPrefix
+from typing import ClassVar
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
