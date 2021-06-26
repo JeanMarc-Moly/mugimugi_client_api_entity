@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
+from typing import ClassVar, Literal
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
@@ -13,12 +14,14 @@ class ConventionCommon(ItemCommon):
     class Type(Enum):
         TYPE = ItemType.CONVENTION
 
+    PREFIX: ClassVar[Literal[ElementPrefix.CONVENTION]] = ElementPrefix.CONVENTION
+
     _id: str = field(
         metadata=dict(
             name="ID",
             type=XmlType.ATTRIBUTE,
             required=True,
-            pattern=fr"{ElementPrefix.CONVENTION.value}\d+",
+            pattern=fr"{PREFIX.value}\d+",
         ),
     )
     _type_validator: Type = field(

@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
+from typing import ClassVar, Literal
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
@@ -12,12 +13,14 @@ class CircleCommon(ItemCommon):
     class Type(Enum):
         TYPE = ItemType.CIRCLE
 
+    PREFIX: ClassVar[Literal[ElementPrefix.CIRCLE]] = ElementPrefix.CIRCLE
+
     _id: str = field(
         metadata=dict(
             name="ID",
             type=XmlType.ATTRIBUTE,
             required=True,
-            pattern=fr"{ElementPrefix.CIRCLE.value}\d+",
+            pattern=fr"{PREFIX.value}\d+",
         ),
     )
     _type_validator: Type = field(
