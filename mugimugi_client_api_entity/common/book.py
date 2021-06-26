@@ -29,11 +29,11 @@ class BookCommon(Element):
         ),
     )
     # TODO: maybe not in subclass
-    match_ratio: Percent = field(
-        metadata=dict(
-            name="search", type=XmlType.ATTRIBUTE, required=True, min_inclusive=0
-        ),
-    )
+    # match_ratio: Percent = field(
+    #     metadata=dict(
+    #         name="search", type=XmlType.ATTRIBUTE, required=True, min_inclusive=0
+    #     ),
+    # )
     release_date: Date = field(
         metadata=dict(
             name="DATE_RELEASED", type=XmlType.ELEMENT, required=True, format="%Y-%m-%d"
@@ -54,7 +54,7 @@ class BookCommon(Element):
     is_copybook: bool = field(
         metadata=dict(name="DATA_COPYSHI", type=XmlType.ELEMENT, required=True),
     )
-    magazine: int = field(
+    magazine: bool = field(
         metadata=dict(name="DATA_MAGAZINE", type=XmlType.ELEMENT, required=True),
     )
     language: Language = field(

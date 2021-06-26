@@ -1,8 +1,8 @@
-from test.resource.xml.sample.book.item.publisher.no import BookPublisherNo
+from test.resource.xml.sample.book.dlaction27 import BookDLAction27
 from unittest.case import TestCase
 
 from ..abstract import Sample
 
 
-class TestBookPublisherNo(Sample, TestCase, BookPublisherNo):
+class TestBookDLAction27(Sample, TestCase, BookDLAction27):
     ...

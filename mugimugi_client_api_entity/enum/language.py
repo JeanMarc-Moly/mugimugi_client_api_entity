@@ -1,7 +1,7 @@
-from enum import IntEnum
+from enum import Enum
 
 
-class Language(IntEnum):
+class Language(Enum):
     UNKNOWN = 1
     ENGLISH = 2
     JAPANESE = 3

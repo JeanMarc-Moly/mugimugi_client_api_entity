@@ -4,7 +4,9 @@ from xsdata.exceptions import ConverterWarning, ParserError
 from xsdata.formats.dataclass.parsers import XmlParser
 from xsdata.formats.dataclass.parsers.config import ParserConfig
 
-PARSER = XmlParser(config=ParserConfig(fail_on_unknown_properties=True)).from_string
+PARSER = XmlParser(
+    config=ParserConfig(fail_on_unknown_properties=True, process_xinclude=True)
+).from_string
 
 
 def parse(cls, xml: str):
