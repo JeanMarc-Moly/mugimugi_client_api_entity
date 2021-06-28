@@ -1,8 +1,9 @@
 from __future__ import annotations
+
 from abc import ABC
 from dataclasses import dataclass, field
-from typing import ClassVar
 from functools import cached_property
+from typing import ClassVar
 
 from xsdata.formats.dataclass.models.elements import XmlType
 

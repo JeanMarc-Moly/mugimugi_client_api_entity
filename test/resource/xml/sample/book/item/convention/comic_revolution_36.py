@@ -1,5 +1,4 @@
 from datetime import date
-from typing import get_type_hints
 
 from mugimugi_client_api_entity.main.book import Convention
 
