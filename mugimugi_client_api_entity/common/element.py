@@ -1,8 +1,9 @@
 from __future__ import annotations
+
 from abc import ABC
 from dataclasses import dataclass, field
-from typing import ClassVar
 from functools import cached_property
+from typing import ClassVar
 
 from xsdata.formats.dataclass.models.elements import XmlType
 
@@ -34,5 +35,7 @@ class Element(ABC):
     def __hash__(self) -> int:
         return hash((self.prefix, self.number))
 
-    def __eq__(self, other: Element) -> bool:
-        return self.prefix, self.number == other.prefix, other.number
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Element):
+            return False
+        return (self.prefix, self.number) == (other.prefix, other.number)

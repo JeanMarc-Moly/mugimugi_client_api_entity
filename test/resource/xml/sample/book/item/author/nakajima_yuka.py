@@ -1,5 +1,3 @@
-from typing import get_type_hints
-
 from mugimugi_client_api_entity.enum import Position
 from mugimugi_client_api_entity.main.book import Author
 

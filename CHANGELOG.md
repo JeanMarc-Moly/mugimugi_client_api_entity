@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.6.0] - 2021-06-28
+
+- Make all entities hashable (implements `__hash__` & `__eq__`)
+
 ## [0.5.0] - 2021-06-26
 
 - Changes to all entities
