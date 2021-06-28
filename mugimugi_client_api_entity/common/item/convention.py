@@ -9,7 +9,7 @@ from ...util.converter import Date
 from .abstract import ItemCommon
 
 
-@dataclass
+@dataclass(eq=False)
 class ConventionCommon(ItemCommon):
     class Type(Enum):
         TYPE = ItemType.CONVENTION

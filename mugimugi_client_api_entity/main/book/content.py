@@ -7,7 +7,7 @@ from ...common import ContentCommon, Named
 from ...enum import Ratio
 
 
-@dataclass
+@dataclass(eq=False)
 class LinkedPartialContent(ContentCommon, ABC):
     ratio: Ratio = field(
         metadata=dict(
@@ -20,6 +20,6 @@ class LinkedPartialContent(ContentCommon, ABC):
     )
 
 
-@dataclass
+@dataclass(eq=False)
 class Content(Named, LinkedPartialContent):
     ...

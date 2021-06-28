@@ -1,5 +1,8 @@
+from __future__ import annotations
+
 from abc import ABC
 from dataclasses import dataclass, field
+from functools import cached_property
 from typing import ClassVar
 
 from xsdata.formats.dataclass.models.elements import XmlType
@@ -21,10 +24,18 @@ class Element(ABC):
         ),
     )
 
-    @property
+    @cached_property
     def number(self):
         return int(self._id[1:])
 
-    @property
+    @cached_property
     def prefix(self):
         return ElementPrefix(self._id[0])
+
+    def __hash__(self) -> int:
+        return hash((self.prefix, self.number))
+
+    def __eq__(self, other: object) -> bool:
+        if not isinstance(other, Element):
+            return False
+        return (self.prefix, self.number) == (other.prefix, other.number)

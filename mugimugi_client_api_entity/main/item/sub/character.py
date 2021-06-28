@@ -4,6 +4,6 @@ from ....common import CharacterCommon
 from .abstract import SubItem
 
 
-@dataclass
+@dataclass(eq=False)
 class SubCharacter(SubItem, CharacterCommon):
     ...

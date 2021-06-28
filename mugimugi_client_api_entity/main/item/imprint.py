@@ -4,6 +4,6 @@ from ...common import ImprintCommon
 from .abstract import Item
 
 
-@dataclass
+@dataclass(eq=False)
 class Imprint(Item, ImprintCommon):
     ...

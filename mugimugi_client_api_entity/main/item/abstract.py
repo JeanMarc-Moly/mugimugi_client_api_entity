@@ -20,7 +20,7 @@ class LinkableItem(ItemCommon, Generic[LI]):
             yield e
 
 
-@dataclass
+@dataclass(eq=False)
 class Item(Named, ItemCommon, ABC):
     @dataclass
     class Linker(AbstractLinker, ABC):

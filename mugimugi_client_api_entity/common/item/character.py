@@ -8,7 +8,7 @@ from ...enum import ElementPrefix, ItemType, Sex
 from .abstract import ItemCommon
 
 
-@dataclass
+@dataclass(eq=False)
 class CharacterCommon(ItemCommon):
     class Type(Enum):
         TYPE = ItemType.CHARACTER

@@ -5,7 +5,7 @@ from typing import Iterator
 from xsdata.formats.dataclass.models.elements import XmlType
 
 
-@dataclass
+@dataclass(eq=False)
 class Named(ABC):
     english_name: str = field(
         metadata=dict(name="NAME_EN", type=XmlType.ELEMENT, required=True)

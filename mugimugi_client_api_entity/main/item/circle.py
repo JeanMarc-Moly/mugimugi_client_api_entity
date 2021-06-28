@@ -13,7 +13,7 @@ from .sub import SubAuthor, SubContent
 LI = Union[SubAuthor, SubContent]
 
 
-@dataclass
+@dataclass(eq=False)
 class Circle(Named, CircleCommon, LinkableItem[LI]):
     @dataclass
     class Linker(AbstractLinker):

@@ -7,7 +7,7 @@ from ...common import GenreCommon, Named
 from ...enum import Ratio
 
 
-@dataclass
+@dataclass(eq=False)
 class LinkedPartialGenre(GenreCommon, ABC):
     ratio: Ratio = field(
         metadata=dict(
@@ -20,6 +20,6 @@ class LinkedPartialGenre(GenreCommon, ABC):
     )
 
 
-@dataclass
+@dataclass(eq=False)
 class Genre(Named, LinkedPartialGenre):
     ...

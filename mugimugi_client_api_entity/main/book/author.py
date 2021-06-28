@@ -7,7 +7,7 @@ from ...common import AuthorCommon, Named
 from ...enum import Position
 
 
-@dataclass
+@dataclass(eq=False)
 class LinkedPartialAuthor(AuthorCommon, ABC):
     position: Position = field(
         metadata=dict(
@@ -20,6 +20,6 @@ class LinkedPartialAuthor(AuthorCommon, ABC):
     )
 
 
-@dataclass
+@dataclass(eq=False)
 class Author(Named, LinkedPartialAuthor):
     ...

@@ -13,7 +13,7 @@ from .sub import SubCharacter, SubContent
 LI = Union[SubContent, SubCharacter]
 
 
-@dataclass
+@dataclass(eq=False)
 class Parody(Named, ParodyCommon, LinkableItem[LI]):
     @dataclass
     class Linker(AbstractLinker):

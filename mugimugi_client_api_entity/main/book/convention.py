@@ -5,7 +5,7 @@ from xsdata.formats.dataclass.models.elements import XmlType
 from ...common import ConventionCommon, Named
 
 
-@dataclass
+@dataclass(eq=False)
 class Convention(Named, ConventionCommon):
     # FRQ present but useless
     _: int = field(

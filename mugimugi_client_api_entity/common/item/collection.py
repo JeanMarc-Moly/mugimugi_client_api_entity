@@ -8,7 +8,7 @@ from ...enum import ElementPrefix, ItemType
 from .abstract import ItemCommon
 
 
-@dataclass
+@dataclass(eq=False)
 class CollectionCommon(ItemCommon):
     class Type(Enum):
         TYPE = ItemType.COLLECTION

@@ -7,7 +7,7 @@ from ...common import CircleCommon, Named
 from ...enum import Position
 
 
-@dataclass
+@dataclass(eq=False)
 class LinkedPartialCircle(CircleCommon, ABC):
     position: Position = field(
         metadata=dict(
@@ -20,6 +20,6 @@ class LinkedPartialCircle(CircleCommon, ABC):
     )
 
 
-@dataclass
+@dataclass(eq=False)
 class Circle(Named, LinkedPartialCircle):
     ...

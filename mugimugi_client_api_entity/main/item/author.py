@@ -11,7 +11,7 @@ from .abstract import LinkableItem
 from .sub import SubContent
 
 
-@dataclass
+@dataclass(eq=False)
 class Author(Named, AuthorCommon, LinkableItem[SubContent]):
     @dataclass
     class Linker(AbstractLinker):
