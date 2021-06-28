@@ -1,7 +1,6 @@
 from typing import get_type_hints
 
 from mugimugi_client_api_entity import Author
-from mugimugi_client_api_entity.enum import ItemType
 from mugimugi_client_api_entity.main.item.sub import SubContent
 
 from ......configuration import SAMPLE

@@ -4,7 +4,7 @@ from typing import ClassVar, Literal
 from xsdata.formats.dataclass.models.elements import XmlType
 
 from ..enum import ElementNode, ElementPrefix, Language
-from ..util.converter import Date, Percent
+from ..util.converter import Date
 from .element import Element
 
 
