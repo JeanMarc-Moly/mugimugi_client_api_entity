@@ -33,7 +33,7 @@ LI = Union[
 ]
 
 
-@dataclass
+@dataclass(eq=False)
 class Book(Named, BookCommon):
     @dataclass
     class Linker:

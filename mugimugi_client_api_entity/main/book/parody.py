@@ -7,7 +7,7 @@ from ...common import Named, ParodyCommon
 from ...enum import Ratio
 
 
-@dataclass
+@dataclass(eq=False)
 class LinkedPartialParody(ParodyCommon, ABC):
     ratio: Ratio = field(
         metadata=dict(
@@ -20,6 +20,6 @@ class LinkedPartialParody(ParodyCommon, ABC):
     )
 
 
-@dataclass
+@dataclass(eq=False)
 class Parody(Named, LinkedPartialParody):
     ...

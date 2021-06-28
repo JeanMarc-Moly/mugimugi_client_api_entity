@@ -5,7 +5,7 @@ from xsdata.formats.dataclass.models.elements import XmlType
 from ...common import ImprintCommon, Named
 
 
-@dataclass
+@dataclass(eq=False)
 class Imprint(Named, ImprintCommon):
     # FRQ present but useless
     _: int = field(

@@ -7,7 +7,7 @@ from ...common import CharacterCommon, Named
 from ...enum import Ratio
 
 
-@dataclass
+@dataclass(eq=False)
 class LinkedPartialCharacter(CharacterCommon, ABC):
     ratio: Ratio = field(
         metadata=dict(
@@ -20,6 +20,6 @@ class LinkedPartialCharacter(CharacterCommon, ABC):
     )
 
 
-@dataclass
+@dataclass(eq=False)
 class Character(Named, LinkedPartialCharacter):
     ...

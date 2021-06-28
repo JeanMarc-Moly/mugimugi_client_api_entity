@@ -4,6 +4,6 @@ from ....common import ParodyCommon
 from .abstract import SubItem
 
 
-@dataclass
+@dataclass(eq=False)
 class SubParody(SubItem, ParodyCommon):
     ...

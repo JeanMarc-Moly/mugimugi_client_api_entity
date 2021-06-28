@@ -4,6 +4,6 @@ from ...common import GenreCommon
 from .abstract import Item
 
 
-@dataclass
+@dataclass(eq=False)
 class Genre(Item, GenreCommon):
     ...

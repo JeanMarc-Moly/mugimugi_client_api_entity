@@ -4,6 +4,6 @@ from ...common import ContentCommon
 from .abstract import Item
 
 
-@dataclass
+@dataclass(eq=False)
 class Content(Item, ContentCommon):
     ...

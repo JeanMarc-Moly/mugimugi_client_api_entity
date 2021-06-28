@@ -3,6 +3,6 @@ from dataclasses import dataclass
 from ....common import ItemCommon, Named
 
 
-@dataclass
+@dataclass(eq=False)
 class SubItem(Named, ItemCommon):
     ...

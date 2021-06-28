@@ -4,6 +4,6 @@ from ...common import PublisherCommon
 from .abstract import Item
 
 
-@dataclass
+@dataclass(eq=False)
 class Publisher(Item, PublisherCommon):
     ...

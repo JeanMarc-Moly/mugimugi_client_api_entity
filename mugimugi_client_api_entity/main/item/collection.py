@@ -4,6 +4,6 @@ from ...common import CollectionCommon
 from .abstract import Item
 
 
-@dataclass
+@dataclass(eq=False)
 class Collection(Item, CollectionCommon):
     ...

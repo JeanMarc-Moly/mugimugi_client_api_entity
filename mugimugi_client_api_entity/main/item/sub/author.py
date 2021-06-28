@@ -4,6 +4,6 @@ from ....common import AuthorCommon
 from .abstract import SubItem
 
 
-@dataclass
+@dataclass(eq=False)
 class SubAuthor(SubItem, AuthorCommon):
     ...

@@ -7,7 +7,7 @@ from ...enum import ElementNode
 from ..element import Element
 
 
-@dataclass
+@dataclass(eq=False)
 class ItemCommon(Element, ABC):
     class Meta:
         name = ElementNode.ITEM.value

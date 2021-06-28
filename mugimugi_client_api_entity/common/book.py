@@ -8,7 +8,7 @@ from ..util.converter import Date
 from .element import Element
 
 
-@dataclass
+@dataclass(eq=False)
 class BookCommon(Element):
     class Meta:
         name = ElementNode.BOOK.value
