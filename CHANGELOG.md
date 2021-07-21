@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.1] - 2021-07-21
+
+- Add missing export for matched books.
+
 ## [0.7.0] - 2021-07-21
 
 - Add matched books for image search
