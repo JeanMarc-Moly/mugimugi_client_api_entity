@@ -3,6 +3,7 @@ from datetime import date
 from mugimugi_client_api_entity.enum import Language
 from mugimugi_client_api_entity.main.book import *
 from mugimugi_client_api_entity.util.converter import Percent
+from mugimugi_client_api_entity.util.converter.percent import PercentConverter
 
 from .....configuration import SAMPLE
 from ..abstract import Sample
@@ -22,16 +23,16 @@ from .item.publisher.no import BookPublisherNo
 from .item.type.doujinshi import BookTypeDoujinshi
 
 
-class BookDLAction27(Sample[Book]):
-    file_path = SAMPLE / "book/dlaction27.xml"
-    object = Book(
+class BookDLAction27(Sample[MatchedBook]):
+    file_path = SAMPLE / "book/dlaction27.ratio.xml"
+    object = MatchedBook(
         english_name="D.L. action 27",
         japanese_name="D.L. action 27",
         katakana_name="ディーエルアクション27",
         other_names=[],
         _id="B65715",
         version=6,
-        match_ratio=Percent("87%"),
+        match_ratio=PercentConverter.deserialize("87%"),
         release_date=date(2004, 10, 3),
         isbn="",
         pages_count=28,
@@ -41,7 +42,7 @@ class BookDLAction27(Sample[Book]):
         magazine=False,
         language=Language.JAPANESE,
         info="",
-        _links=Book.Linker(
+        _links=MatchedBook.Linker(
             items=[
                 BookAuthorNakajimaYuka.object,
                 BookCharacterCaster.object,

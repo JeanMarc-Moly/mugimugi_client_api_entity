@@ -28,12 +28,6 @@ class BookCommon(Element):
             name="VER", type=XmlType.ATTRIBUTE, required=True, min_inclusive=0
         ),
     )
-    # TODO: maybe not in subclass
-    # match_ratio: Percent = field(
-    #     metadata=dict(
-    #         name="search", type=XmlType.ATTRIBUTE, required=True, min_inclusive=0
-    #     ),
-    # )
     release_date: Date = field(
         metadata=dict(
             name="DATE_RELEASED", type=XmlType.ELEMENT, required=True, format="%Y-%m-%d"

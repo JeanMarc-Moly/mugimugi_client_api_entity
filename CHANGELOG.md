@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.0] - 2021-07-21
+
+- Add matched books for image search
+
 ## [0.6.0] - 2021-06-28
 
 - Make all entities hashable (implements `__hash__` & `__eq__`)
