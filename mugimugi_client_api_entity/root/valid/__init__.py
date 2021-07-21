@@ -1,6 +1,6 @@
 from .abstract import ValidRoot
 from .author import AuthorRoot
-from .book import BookRoot
+from .book import BookRoot, MatchedBookRoot
 from .character import CharacterRoot
 from .circle import CircleRoot
 from .collection import CollectionRoot

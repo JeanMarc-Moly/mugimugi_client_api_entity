@@ -12,6 +12,7 @@ from .valid import (
     ConventionRoot,
     GenreRoot,
     ImprintRoot,
+    MatchedBookRoot,
     ParodyRoot,
     PublisherRoot,
     ValidRoot,
