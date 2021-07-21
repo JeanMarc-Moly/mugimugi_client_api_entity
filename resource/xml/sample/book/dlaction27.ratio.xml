@@ -15,7 +15,7 @@
     <!ENTITY type__doujinshi SYSTEM "resource/xml/sample/book/item/type/doujinshi.xml">
 ]>
 
-<BOOK ID="B65715" VER="6" xmlns:xi="http://www.w3.org/2001/XInclude" search="87%">
+<BOOK ID="B65715" VER="6" xmlns:xi="http://www.w3.org/2001/XInclude" search="87,12%">
     <NAME_EN>D.L. action 27</NAME_EN>
     <NAME_JP>D.L. action 27</NAME_JP>
     <NAME_R>ディーエルアクション27</NAME_R>

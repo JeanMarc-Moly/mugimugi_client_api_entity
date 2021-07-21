@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.7.2] - 2021-07-21
+
+- MugiMugi use comma as floating point separator.
+
 ## [0.7.1] - 2021-07-21
 
 - Add missing export for matched books.
