@@ -32,7 +32,7 @@ class BookDLAction27(Sample[MatchedBook]):
         other_names=[],
         _id="B65715",
         version=6,
-        match_ratio=PercentConverter.deserialize("87%"),
+        match_ratio=PercentConverter.deserialize("87,12%"),
         release_date=date(2004, 10, 3),
         isbn="",
         pages_count=28,
