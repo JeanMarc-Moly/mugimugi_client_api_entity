@@ -8,7 +8,7 @@ class Percent(float):
 class PercentConverter(Converter):
     @staticmethod
     def deserialize(value: str, **_) -> Percent:
-        return Percent(value.removesuffix("%"))
+        return Percent(value.removesuffix("%").replace(",", "."))
 
     @staticmethod
     def serialize(value: Percent, **_) -> str:
